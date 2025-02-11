@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .car-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+        .car-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Car Showcase</h1>
+    <p>Explore a variety of car models</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+
+:<section class="main-content">
+    <div class="car-item">
+        <img src="car1.jpg" alt="Car 1">
+        <h3>Sports Car Model X</h3>
+        <p>The ultimate sports car with stunning performance.</p>
+    </div>
+    <div class="car-item">
+        <img src="car2.jpg" alt="Car 2">
+        <h3>SUV Model Y</h3>
+        <p>A luxurious SUV with advanced technology.</p>
+    </div>
+    <div class="car-item">
+        <img src="car3.jpg" alt="Car 3">
+        <h3>Electric Car Z</h3>
+        <p>Eco-friendly and powerful electric vehicle.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Car Showcase. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
