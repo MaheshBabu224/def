@@ -3,100 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Showcase</title>
+    <title>Happy Valentine's Day</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fef9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
         header {
-            background-color: #333;
+            background: #f44336;
             color: white;
-            padding: 20px;
+            padding: 50px 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
-        nav a {
+
+        header p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1600x900?text=Happy+Valentine%27s+Day') no-repeat center center/cover;
             color: white;
-            padding: 14px 20px;
+            text-align: center;
+            padding: 150px 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            background-color: #e91e63;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
             text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #d81b60;
+        }
+
+        .content-section {
+            padding: 60px 20px;
             text-align: center;
         }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
+
+        .content-section:nth-child(even) {
+            background-color: #f4f4f4;
         }
-        .main-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
+
+        .content-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .car-item {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            text-align: center;
+
+        .content-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
         }
-        .car-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #333;
+
+        .footer {
+            background-color: #f44336;
             color: white;
             text-align: center;
             padding: 20px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+        }
+
+        .footer p {
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .hero h2 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .content-section h2 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to the Car Showcase</h1>
-    <p>Explore a variety of car models</p>
+    <h1>Happy Valentine's Day!</h1>
+    <p>Spread love, joy, and happiness!</p>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</nav>
-
-
-:<section class="main-content">
-    <div class="car-item">
-        <img src="./sports.avif" alt="Car 1">
-        <h3>Sports Car Model X</h3>
-        <p>The ultimate sports car with stunning performance.</p>
-    </div>
-    <div class="car-item">
-        <img src="suv.png" alt="Car 2">
-        <h3>SUV Model Y</h3>
-        <p>A luxurious SUV with advanced technology.</p>
-    </div>
-    <div class="car-item">
-        <img src="electric.jpg" alt="Car 3">
-        <h3>Electric Car Z</h3>
-        <p>Eco-friendly and powerful electric vehicle.</p>
-    </div>
+<section class="hero">
+    <h2>Celebrate Love Today!</h2>
+    <p>May this day bring you closer to the ones you cherish the most.</p>
+    <a href="#love-message" class="cta-button">Send Love</a>
 </section>
 
-<footer>
-    <p>&copy; 2025 Car Showcase. All rights reserved.</p>
+<section class="content-section" id="love-message">
+    <h2>A Special Valentine's Day Message</h2>
+    <p>This day is all about spreading love and kindness. May your heart be full of joy, and may you create memories that last forever.</p>
+    <p>Whether you are with a loved one, a friend, or family, make this day special by showing the ones you love just how much they mean to you!</p>
+    <a href="#footer" class="cta-button">Join the Celebration</a>
+</section>
+
+<section class="content-section">
+    <h2>Why Valentine's Day?</h2>
+    <p>Valentine's Day is more than just flowers and chocolates. It’s a reminder to show love, kindness, and affection to those who matter most in your life.</p>
+    <p>We believe love can change the world, one person at a time. Let this day be the start of something beautiful!</p>
+</section>
+
+<section class="content-section" style="background-color: #ffebee;">
+    <h2>Make Every Day Valentine's Day</h2>
+    <p>True love isn’t limited to just one day. Every day is an opportunity to show love and care. Let’s make the world a better place, full of kindness and understanding.</p>
+    <p>We hope you carry the spirit of Valentine’s Day with you every day of the year!</p>
+</section>
+
+<footer class="footer" id="footer">
+    <p>&copy; 2025 Love & Wishes | All Rights Reserved</p>
 </footer>
 
 </body>
 </html>
-
