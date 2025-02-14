@@ -3,165 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day</title>
+    <title>Happy Valentine's Day, Samantha!</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #fef9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #f44336;
-            color: white;
-            padding: 50px 0;
+            background-color: #f8d7da;
+            font-family: Arial, sans-serif;
+            color: #4f4f4f;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            overflow: hidden;
+            margin: 0;
         }
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
+        h1 {
+            color: #c02d3d;
+            font-size: 50px;
+            margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1.5em;
-            margin-bottom: 40px;
-            font-weight: 300;
+        p {
+            font-size: 24px;
+            margin-top: 20px;
         }
 
-        .hero {
-            background: url('https://via.placeholder.com/1600x900?text=Happy+Valentine%27s+Day') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 20px;
-            background-size: cover;
-            background-position: center;
+        .heart {
+            color: #ff4d4d;
+            font-size: 80px;
         }
 
-        .hero h2 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            font-weight: 300;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .cta-button {
-            background-color: #e91e63;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #d81b60;
-        }
-
-        .content-section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .content-section:nth-child(even) {
-            background-color: #f4f4f4;
-        }
-
-        .content-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .content-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
+        .message {
+            font-size: 20px;
+            margin-top: 30px;
+            font-style: italic;
         }
 
         .footer {
-            background-color: #f44336;
+            margin-top: 50px;
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .button-container {
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #c02d3d;
             color: white;
-            text-align: center;
-            padding: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
         }
 
-        .footer p {
-            font-size: 1.1em;
+        .button:hover {
+            background-color: #ff4d4d;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2em;
-            }
+        /* Butterfly Animation */
+        .butterfly {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #ff4d4d;
+            border-radius: 50%;
+            animation: fly 4s infinite;
+        }
 
-            header p {
-                font-size: 1.2em;
+        @keyframes fly {
+            0% {
+                transform: translate(0, 0) rotate(0);
             }
-
-            .hero h2 {
-                font-size: 2.5em;
+            25% {
+                transform: translate(300px, 50px) rotate(90deg);
             }
-
-            .hero p {
-                font-size: 1.1em;
+            50% {
+                transform: translate(600px, -100px) rotate(180deg);
             }
+            75% {
+                transform: translate(500px, 200px) rotate(270deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
 
-            .content-section h2 {
-                font-size: 2em;
+        /* Heart Animation */
+        .heart-effect {
+            position: absolute;
+            color: #ff4d4d;
+            font-size: 30px;
+            animation: heart 2s infinite;
+        }
+
+        @keyframes heart {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
             }
         }
     </style>
 </head>
 <body>
+    <h1>Happy Valentine's Day, Samantha!</h1>
+    <div class="heart">❤️</div>
+    <p class="message">Every moment with you is a precious gift. You make my world brighter, and my heart beats just for you. Wishing you all the love and happiness in the world today and always!</p>
+    <div class="heart">❤️</div>
+    <p class="footer">With all my love, [Your Name]</p>
 
-<header>
-    <h1>Happy Valentine's Day!</h1>
-    <p>Spread love, joy, and happiness!</p>
-</header>
+    <div class="button-container">
+        <button class="button" onclick="generateButterflies()">Generate Butterflies</button>
+        <button class="button" onclick="generateHearts()">Generate Hearts</button>
+    </div>
 
-<section class="hero">
-    <h2>Celebrate Love Today!</h2>
-    <p>May this day bring you closer to the ones you cherish the most.</p>
-    <a href="#love-message" class="cta-button">Send Love</a>
-</section>
+    <script>
+        // Function to generate butterflies
+        function generateButterflies() {
+            for (let i = 0; i < 5; i++) {
+                let butterfly = document.createElement('div');
+                butterfly.classList.add('butterfly');
+                butterfly.style.top = `${Math.random() * window.innerHeight}px`;
+                butterfly.style.left = `${Math.random() * window.innerWidth}px`;
+                document.body.appendChild(butterfly);
+                setTimeout(() => {
+                    butterfly.remove();
+                }, 4000); // Remove after animation
+            }
+        }
 
-<section class="content-section" id="love-message">
-    <h2>A Special Valentine's Day Message</h2>
-    <p>This day is all about spreading love and kindness. May your heart be full of joy, and may you create memories that last forever.</p>
-    <p>Whether you are with a loved one, a friend, or family, make this day special by showing the ones you love just how much they mean to you!</p>
-    <a href="#footer" class="cta-button">Join the Celebration</a>
-</section>
-
-<section class="content-section">
-    <h2>Why Valentine's Day?</h2>
-    <p>Valentine's Day is more than just flowers and chocolates. It’s a reminder to show love, kindness, and affection to those who matter most in your life.</p>
-    <p>We believe love can change the world, one person at a time. Let this day be the start of something beautiful!</p>
-</section>
-
-<section class="content-section" style="background-color: #ffebee;">
-    <h2>Make Every Day Valentine's Day</h2>
-    <p>True love isn’t limited to just one day. Every day is an opportunity to show love and care. Let’s make the world a better place, full of kindness and understanding.</p>
-    <p>We hope you carry the spirit of Valentine’s Day with you every day of the year!</p>
-</section>
-
-<footer class="footer" id="footer">
-    <p>&copy; 2025 Love & Wishes | All Rights Reserved</p>
-</footer>
-
+        // Function to generate hearts
+        function generateHearts() {
+            for (let i = 0; i < 20; i++) {
+                let heart = document.createElement('div');
+                heart.classList.add('heart-effect');
+                heart.textContent = '❤️';
+                heart.style.top = `${Math.random() * window.innerHeight}px`;
+                heart.style.left = `${Math.random() * window.innerWidth}px`;
+                document.body.appendChild(heart);
+                setTimeout(() => {
+                    heart.remove();
+                }, 2000); // Remove after animation
+            }
+        }
+    </script>
 </body>
 </html>
