@@ -88,6 +88,13 @@
     <div class="heart">❤️</div>
     <p class="footer">With all my love, [Meow]</p>
     
+    <!-- Text input where you can edit the message -->
+    <div>
+        <textarea id="messageInput" class="message-input" placeholder="Write a Message here..." oninput="allowChanges()"></textarea>
+    </div>
+    <p class="footer-message">Only you can change the message text above.</p>
+
+    <script>
         // Function to generate pink hearts
         function generateHearts() {
             for (let i = 0; i < 30; i++) {
