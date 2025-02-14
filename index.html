@@ -72,6 +72,22 @@
             color: #800000; /* Marron Red color */
         }
 
+        /* Button styling */
+        .open-button {
+            background-color: #800000; /* Marron red background */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .open-button:hover {
+            background-color: #a52a2a; /* Darker shade of marron red on hover */
+        }
+
         /* Text input styling */
         .message-input {
             margin-top: 30px;
@@ -84,6 +100,13 @@
             color: #4f4f4f;
         }
 
+        .hidden-message {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #800000; /* Marron Red color */
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
@@ -91,8 +114,14 @@
     <div class="heart">❤️</div>
     <p class="message">Every moment with you is a precious gift. I'm so happy that I got a girl like you, Wishing you all the love and happiness in the world today and always! Let's be together and never give up on each other.</p>
     <div class="heart">❤️</div>
-    <p class="footer marron-red">LOVE YOU SO MUCH SAMMULU</p>
+    <p class="footer">With all my love, [Meow]</p>
     
+    <!-- Button to open the hidden message -->
+    <button class="open-button" onclick="showMessage()">Open this</button>
+
+    <!-- Hidden message -->
+    <p id="hiddenMessage" class="hidden-message">LOVE YOU SO MUCH SAMMULU</p>
+
     <!-- Text input where you can edit the message -->
     <div>
         <textarea id="messageInput" class="message-input" placeholder="Write a Message here..." oninput="allowChanges()"></textarea>
@@ -114,6 +143,11 @@
                     heart.remove();
                 }, 2000); // Remove heart after animation
             }
+        }
+
+        // Function to show the hidden message
+        function showMessage() {
+            document.getElementById("hiddenMessage").style.display = "block";
         }
 
         // Function to allow the user to change the message
