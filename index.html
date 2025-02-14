@@ -12,7 +12,8 @@
             text-align: center;
             padding: 20px;
             margin: 0;
-            overflow-x: hidden;
+            overflow-y: auto; /* Ensures vertical scrolling */
+            min-height: 100vh; /* Ensures the page takes full height of the screen */
         }
 
         h1 {
@@ -162,37 +163,4 @@
         function generateHearts() {
             for (let i = 0; i < 30; i++) {
                 let heart = document.createElement('div');
-                heart.classList.add('heart-effect');
-                heart.textContent = '❤️';
-                heart.style.color = '#ff66b2'; // Pink color for hearts
-                heart.style.top = `${Math.random() * window.innerHeight}px`;
-                heart.style.left = `${Math.random() * window.innerWidth}px`;
-                document.body.appendChild(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 2000); // Remove heart after animation
-            }
-        }
-
-        // Function to show the hidden message
-        function showMessage() {
-            document.getElementById("hiddenMessage").style.display = "block";
-        }
-
-        // Function to allow the user to change the message
-        function allowChanges() {
-            document.getElementById('messageInput').disabled = false; // Ensures the input remains editable
-        }
-
-        // Trigger heart effect on page load
-        window.onload = function() {
-            generateHearts();
-
-            // Set a timeout to stop generating hearts after 5 seconds
-            setTimeout(() => {
-                // You can add any additional actions after 5 seconds if needed
-            }, 5000); // Remove hearts after 5 seconds
-        };
-    </script>
-</body>
-</html>
+                heart.classList.add('hea
