@@ -43,30 +43,8 @@
             color: #6c757d;
         }
 
-        .button-container {
-            margin-top: 40px;
-        }
-
-        .button {
-            background-color: #c02d3d;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin: 10px;
-        }
-
-        .button:hover {
-            background-color: #ff4d4d;
-        }
-
-        /* Heart Animation */
         .heart-effect {
             position: absolute;
-            color: #ff4d4d;
             font-size: 30px;
             animation: heart 2s infinite;
         }
@@ -82,54 +60,25 @@
             }
         }
 
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
+        .footer-message {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #6c757d;
         }
 
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            height: 80%;
-            overflow: auto;
-            position: relative;
-        }
-
-        .modal textarea {
-            width: 100%;
-            height: 80%;
+        /* Text input styling */
+        .message-input {
+            margin-top: 30px;
             padding: 10px;
             font-size: 16px;
-            border: 1px solid #ccc;
+            width: 80%;
+            border: 2px solid #c02d3d;
             border-radius: 5px;
-            resize: none;
+            background-color: #f8d7da;
+            color: #4f4f4f;
         }
 
-        .modal .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #c02d3d;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 20px;
-        }
-
-        .modal .close-btn:hover {
-            background-color: #ff4d4d;
-        }
     </style>
 </head>
 <body>
@@ -139,48 +88,43 @@
     <div class="heart">❤️</div>
     <p class="footer">With all my love, [Meow]</p>
 
-    <div class="button-container">
-        <button class="button" onclick="generateHearts()">Generate Hearts</button>
-        <button class="button" onclick="openLetterSpace()">Write Me a Message</button>
+    <!-- Removed the "Write Me a Message" button and added the text input field -->
+    <div>
+        <textarea id="messageInput" class="message-input" placeholder="Write a Message here..." oninput="allowChanges()"></textarea>
     </div>
 
-    <div id="letterModal" class="modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeLetterSpace()">X</button>
-            <h2>Any Message for me!</h2>
-            <textarea placeholder="Write a Messageh ere..."></textarea>
-        </div>
-    </div>
+    <p class="footer-message">Only you can change the message text above.</p>
 
     <script>
-        // Function to generate hearts
+        // Function to generate pink hearts
         function generateHearts() {
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 30; i++) {
                 let heart = document.createElement('div');
                 heart.classList.add('heart-effect');
                 heart.textContent = '❤️';
+                heart.style.color = '#ff66b2'; // Pink color for hearts
                 heart.style.top = `${Math.random() * window.innerHeight}px`;
                 heart.style.left = `${Math.random() * window.innerWidth}px`;
                 document.body.appendChild(heart);
                 setTimeout(() => {
                     heart.remove();
-                }, 2000); // Remove after animation
+                }, 2000); // Remove heart after animation
             }
         }
 
-        // Open the letter writing modal
-        function openLetterSpace() {
-            document.getElementById('letterModal').style.display = 'flex';
-        }
-
-        // Close the letter writing modal
-        function closeLetterSpace() {
-            document.getElementById('letterModal').style.display = 'none';
+        // Function to allow the user to change the message
+        function allowChanges() {
+            document.getElementById('messageInput').disabled = false; // Ensures the input remains editable
         }
 
         // Trigger heart effect on page load
         window.onload = function() {
             generateHearts();
+
+            // Set a timeout to stop generating hearts after 5 seconds
+            setTimeout(() => {
+                // You can add any additional actions after 5 seconds if needed
+            }, 5000); // Remove hearts after 5 seconds
         };
     </script>
 </body>
