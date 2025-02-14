@@ -10,9 +10,9 @@
             font-family: Arial, sans-serif;
             color: #4f4f4f;
             text-align: center;
-            padding: 50px;
-            overflow: hidden;
+            padding: 20px;
             margin: 0;
+            overflow-x: hidden;
         }
 
         h1 {
@@ -76,10 +76,10 @@
         .open-button {
             background-color: #800000; /* Marron red background */
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 20px;
             cursor: pointer;
             margin-top: 30px;
         }
@@ -106,6 +106,35 @@
             font-weight: bold;
             color: #800000; /* Marron Red color */
             margin-top: 30px;
+        }
+
+        /* Ensure page scrolls properly on mobile */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .message {
+                font-size: 18px;
+            }
+
+            .footer {
+                font-size: 16px;
+            }
+
+            .open-button {
+                width: 100%;
+                font-size: 18px;
+            }
+
+            .message-input {
+                width: 100%;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
